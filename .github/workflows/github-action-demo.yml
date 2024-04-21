@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   workflow_dispatch:
 
@@ -18,11 +18,11 @@ jobs:
   test-job:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3 
-      - run: python3 Calculadora.py
+      - uses: actions/checkout@v3
+      - run: python3 Calculadora.py 1 25 10
 
-  deploy-job: 
+  deploy-job:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3 
+      - uses: actions/checkout@v3
       - run: echo "Finalizado!"
