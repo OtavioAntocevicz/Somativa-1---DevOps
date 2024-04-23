@@ -25,17 +25,40 @@ const Formulario = () => {
   };
 
   return (
-    <div style={{display: "block"}}>
-      <h2>Login</h2>
-      <input type="email" placeholder="Email" onChange={onEmailInputChange} />
+    <div
+      style={{
+        height: "100vh",
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex",
+        flexDirection: "column",
+        backgroundImage:
+          "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)",
+      }}
+    >
+      <h2
+        style={{
+          fontFamily: "Arial",
+          color: "#fff",
+        }}
+      >
+        Login
+      </h2>
+      <input
+        type="email"
+        placeholder="Email"
+        onChange={onEmailInputChange}
+        style={{width: "10rem", borderRadius: "10px"}}
+      />
       <br />
       <input
         type="password"
         placeholder="Senha"
         onChange={onPasswordInputChange}
+        style={{width: "10rem", borderRadius: "10px"}}
       />
       <br />
-      <button type="submit" onClick={handleLogin}>
+      <button type="submit" onClick={handleLogin} style={{width: "10rem"}}>
         Acessar
       </button>
       <br />
