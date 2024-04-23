@@ -28,10 +28,6 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Build for deployment (optional)
-        if: ${{ github.event_name == 'push' && github.base_branch == 'main' }} # Only build on push to main branch
-        run: npm run build
-
   deploy-job:
     runs-on: ubuntu-latest
     steps:
